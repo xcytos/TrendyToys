@@ -24,7 +24,7 @@ export const mockProducts: ToyProduct[] = [
     ageRange: "4–8",
     description:
       "A modern pastel toy house with swappable rooms and accessories, designed for endless storytelling.",
-    imageUrl: "toy1.png",
+    imageUrl: "/toy1.png",
     status: "active",
     availability: "inStock",
     featured: true
@@ -37,7 +37,7 @@ export const mockProducts: ToyProduct[] = [
     ageRange: "4–6",
     description:
       "A sleek neon car with soft edges and glow details that looks right at home in TrendyToys branding.",
-    imageUrl: "toy2.png",
+    imageUrl: "/toy2.png",
     status: "active",
     availability: "inStock",
     featured: true
@@ -50,7 +50,7 @@ export const mockProducts: ToyProduct[] = [
     ageRange: "7–10",
     description:
       "A curated set of colorful blocks that encourage STEM thinking and creative building.",
-    imageUrl: "toy3.png",
+    imageUrl: "/toy3.png",
     status: "active",
     availability: "inStock",
     featured: false
@@ -63,7 +63,7 @@ export const mockProducts: ToyProduct[] = [
     ageRange: "0–3",
     description:
       "A super-soft, pastel plush character that matches the TrendyToys hero palette.",
-    imageUrl: "toy4.png",
+    imageUrl: "/toy4.png",
     status: "active",
     availability: "outOfStock",
     featured: false
@@ -76,7 +76,7 @@ export const mockProducts: ToyProduct[] = [
     ageRange: "1–4",
     description:
       "Rounded, stackable arches in soft gradients that help with motor skills and color recognition.",
-    imageUrl: "toy5.png",
+    imageUrl: "/toy5.png",
     status: "inactive",
     availability: "inStock",
     featured: false
@@ -89,7 +89,7 @@ export const mockProducts: ToyProduct[] = [
     ageRange: "6–9",
     description:
       "Stickers, shapes, and safe tools packed into a single kit for rainy-day creativity.",
-    imageUrl: "toy3.png",
+    imageUrl: "/toy3.png",
     status: "active",
     availability: "inStock",
     featured: false
@@ -102,7 +102,7 @@ export const mockProducts: ToyProduct[] = [
     ageRange: "4–8",
     description:
       "Multi-level city garage with ramps, parking spots, and a pastel cityscape backdrop.",
-    imageUrl: "toy1.png",
+    imageUrl: "/toy1.png",
     status: "active",
     availability: "inStock",
     featured: true
@@ -115,7 +115,7 @@ export const mockProducts: ToyProduct[] = [
     ageRange: "4–6",
     description:
       "A glow-in-the-dark racer with soft neon edges, perfect for night-time play sessions.",
-    imageUrl: "toy2.png",
+    imageUrl: "/toy2.png",
     status: "active",
     availability: "inStock",
     featured: false
@@ -128,7 +128,7 @@ export const mockProducts: ToyProduct[] = [
     ageRange: "7–10",
     description:
       "Snap-together tiles with numbers and symbols for playful math challenges.",
-    imageUrl: "toy3.png",
+    imageUrl: "/toy3.png",
     status: "active",
     availability: "inStock",
     featured: false
@@ -141,7 +141,7 @@ export const mockProducts: ToyProduct[] = [
     ageRange: "0–3",
     description:
       "A pair of matching plush friends designed as a cozy, pastel duo.",
-    imageUrl: "toy4.png",
+    imageUrl: "/toy4.png",
     status: "active",
     availability: "inStock",
     featured: false
@@ -154,7 +154,7 @@ export const mockProducts: ToyProduct[] = [
     ageRange: "1–4",
     description:
       "Stackable arches inspired by city skylines, with soft touch and safe edges.",
-    imageUrl: "toy5.png",
+    imageUrl: "/toy5.png",
     status: "active",
     availability: "inStock",
     featured: false
@@ -167,7 +167,7 @@ export const mockProducts: ToyProduct[] = [
     ageRange: "6–9",
     description:
       "A big set of colorful, on-brand stickers and shapes for decorating anything.",
-    imageUrl: "toy3.png",
+    imageUrl: "/toy3.png",
     status: "active",
     availability: "inStock",
     featured: false

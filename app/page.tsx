@@ -92,7 +92,7 @@ export default function HomePage() {
                 </div>
                 <div className="aspect-[4/3] bg-surface-muted">
                   <img
-                    src="/hero-kids-1.jpg"
+                    src="/hero-kids-1.png"
                     alt="Kids playing with Trendy Toys"
                     className="h-full w-full object-cover"
                   />
@@ -150,7 +150,7 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-2xl bg-surface-muted shadow-sm">
               <div className="aspect-[4/3] bg-surface">
                 <img
-                  src="/hero-kids-2.jpg"
+                  src="/hero-kids-2.png"
                   alt="Child stacking colorful toys"
                   className="h-full w-full object-cover"
                 />
@@ -162,7 +162,7 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-2xl bg-surface-muted shadow-sm">
               <div className="aspect-[4/3] bg-surface">
                 <img
-                  src="/hero-kids-3.jpg"
+                  src="/hero-kids-3.png"
                   alt="Parents and child playing together"
                   className="h-full w-full object-cover"
                 />
@@ -174,7 +174,7 @@ export default function HomePage() {
             <div className="overflow-hidden rounded-2xl bg-surface-muted shadow-sm">
               <div className="aspect-[4/3] bg-surface">
                 <img
-                  src="/hero-toys-flatlay.jpg"
+                  src="/hero-kids-4.png"
                   alt="Flatlay of Trendy Toys products"
                   className="h-full w-full object-cover"
                 />

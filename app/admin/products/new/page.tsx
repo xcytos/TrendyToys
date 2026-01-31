@@ -36,7 +36,7 @@ export default function AdminNewProductPage() {
       category: draft.category,
       ageRange: draft.ageRange,
       description: draft.description,
-      imageUrl: draft.imageUrl || "/toys/toy-1.png",
+      imageUrl: draft.imageUrl || "/toy1.png",
       status: draft.status,
       availability: draft.availability,
       featured: draft.featured
@@ -112,7 +112,7 @@ export default function AdminNewProductPage() {
               onChange={(event) =>
                 setDraft((prev) => ({ ...prev, imageUrl: event.target.value }))
               }
-              placeholder="/toys/toy-1.png"
+              placeholder="/toy1.png"
             />
           </div>
         </div>
