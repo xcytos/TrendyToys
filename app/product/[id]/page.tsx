@@ -7,6 +7,7 @@ import { Carousel } from "../../../components/ui/carousel";
 import { ProductTile } from "../../../components/toys/ProductTile";
 import { useCartStore } from "../../../lib/store/cart";
 import { Button } from "../../../components/ui/button";
+import { useRouter } from "next/navigation";
 
 type ProductPageProps = {
   params: {
@@ -18,6 +19,7 @@ export default function ProductPage(props: ProductPageProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [justAdded, setJustAdded] = useState(false);
   const addItem = useCartStore((state) => state.addItem);
+  const router = useRouter();
 
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {
@@ -83,7 +85,7 @@ export default function ProductPage(props: ProductPageProps) {
               <h1 className="text-3xl font-semibold">
                 {product.name}
               </h1>
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3">
                 <div className="text-lg font-semibold text-primary-strong">
                   {formatPrice(product.price)}
                 </div>
@@ -98,6 +100,17 @@ export default function ProductPage(props: ProductPageProps) {
                     ? "In stock (demo)"
                     : "Out of stock (demo)"}
                 </span>
+                <button
+                  type="button"
+                  onClick={() =>
+                    router.push(
+                      `/shop?category=${encodeURIComponent(product.category)}`
+                    )
+                  }
+                  className="rounded-full bg-surface px-3 py-1 text-[11px] font-medium text-text-soft underline-offset-2 hover:text-text-main hover:underline"
+                >
+                  View more in {product.category}
+                </button>
               </div>
               <div className="text-sm text-text-muted">
                 Age range: {product.ageRange}

@@ -93,5 +93,83 @@ export const mockProducts: ToyProduct[] = [
     status: "active",
     availability: "inStock",
     featured: false
+  },
+  {
+    id: "toy-city-garage",
+    name: "City Garage Playset",
+    price: 59,
+    category: "Playsets",
+    ageRange: "4–8",
+    description:
+      "Multi-level city garage with ramps, parking spots, and a pastel cityscape backdrop.",
+    imageUrl: "toy1.png",
+    status: "active",
+    availability: "inStock",
+    featured: true
+  },
+  {
+    id: "toy-night-rider",
+    name: "Night Rider Glow Car",
+    price: 31,
+    category: "Vehicles",
+    ageRange: "4–6",
+    description:
+      "A glow-in-the-dark racer with soft neon edges, perfect for night-time play sessions.",
+    imageUrl: "toy2.png",
+    status: "active",
+    availability: "inStock",
+    featured: false
+  },
+  {
+    id: "toy-math-puzzle",
+    name: "Math Puzzle Tiles",
+    price: 33,
+    category: "Educational",
+    ageRange: "7–10",
+    description:
+      "Snap-together tiles with numbers and symbols for playful math challenges.",
+    imageUrl: "toy3.png",
+    status: "active",
+    availability: "inStock",
+    featured: false
+  },
+  {
+    id: "toy-plush-duo",
+    name: "Pastel Plush Duo",
+    price: 38,
+    category: "Plush",
+    ageRange: "0–3",
+    description:
+      "A pair of matching plush friends designed as a cozy, pastel duo.",
+    imageUrl: "toy4.png",
+    status: "active",
+    availability: "inStock",
+    featured: false
+  },
+  {
+    id: "toy-arc-stack",
+    name: "City Arc Stackers",
+    price: 36,
+    category: "Stacking",
+    ageRange: "1–4",
+    description:
+      "Stackable arches inspired by city skylines, with soft touch and safe edges.",
+    imageUrl: "toy5.png",
+    status: "active",
+    availability: "inStock",
+    featured: false
+  },
+  {
+    id: "toy-sticker-party",
+    name: "Sticker Party Pack",
+    price: 22,
+    category: "Craft",
+    ageRange: "6–9",
+    description:
+      "A big set of colorful, on-brand stickers and shapes for decorating anything.",
+    imageUrl: "toy3.png",
+    status: "active",
+    availability: "inStock",
+    featured: false
   }
 ];

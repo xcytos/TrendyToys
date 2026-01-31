@@ -10,12 +10,16 @@ type Filters = {
   category: string;
   age: string;
   sort: string;
+  inStockOnly: boolean;
+  featuredOnly: boolean;
 };
 
 const initialFilters: Filters = {
   category: "all",
   age: "all",
-  sort: "popular"
+  sort: "popular",
+  inStockOnly: false,
+  featuredOnly: false
 };
 
 function normalizeAgeValue(value: string) {
@@ -82,6 +86,14 @@ export default function ShopPage() {
       list = list.filter((p) => ageMatchesFilter(p.ageRange, filters.age));
     }
 
+    if (filters.inStockOnly) {
+      list = list.filter((p) => p.availability === "inStock");
+    }
+
+    if (filters.featuredOnly) {
+      list = list.filter((p) => p.featured);
+    }
+
     if (filters.sort === "price-low") {
       list = list.sort((a, b) => a.price - b.price);
     } else if (filters.sort === "price-high") {
@@ -92,7 +104,10 @@ export default function ShopPage() {
   }, [filters]);
 
   const activeFiltersCount =
-    (filters.category !== "all" ? 1 : 0) + (filters.age !== "all" ? 1 : 0);
+    (filters.category !== "all" ? 1 : 0) +
+    (filters.age !== "all" ? 1 : 0) +
+    (filters.inStockOnly ? 1 : 0) +
+    (filters.featuredOnly ? 1 : 0);
 
   const handleChange = (next: Partial<Filters>) => {
     setFilters((prev) => ({ ...prev, ...next }));
@@ -192,6 +207,48 @@ export default function ShopPage() {
               </button>
             )}
           </div>
+        </div>
+      </div>
+
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+        <div className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() =>
+              handleChange({
+                inStockOnly: !filters.inStockOnly
+              })
+            }
+            className={`rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
+              filters.inStockOnly
+                ? "border-primary bg-primary-soft text-text-main"
+                : "border-surface-muted bg-surface text-text-muted hover:border-primary-soft"
+            }`}
+          >
+            In-stock only
+          </button>
+          <button
+            type="button"
+            onClick={() =>
+              handleChange({
+                featuredOnly: !filters.featuredOnly
+              })
+            }
+            className={`rounded-full border px-3 py-1 text-xs font-medium transition-colors ${
+              filters.featuredOnly
+                ? "border-secondary bg-secondary-soft text-text-main"
+                : "border-surface-muted bg-surface text-text-muted hover:border-secondary-soft"
+            }`}
+          >
+            Featured picks
+          </button>
+        </div>
+        <div className="text-xs text-text-muted">
+          Showing{" "}
+          <span className="font-semibold text-text-main">
+            {products.length}
+          </span>{" "}
+          toy{products.length === 1 ? "" : "s"}
         </div>
       </div>
 
