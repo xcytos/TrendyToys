@@ -11,6 +11,7 @@ import { Button } from "../../../components/ui/button";
 import { Badge } from "../../../components/ui/badge";
 import { Header } from "../../../components/layout/header";
 import { useRouter, useParams } from "next/navigation";
+import Image from "next/image";
 
 type ProductPageParams = {
   id: string;
@@ -128,10 +129,13 @@ export default function ProductPage() {
                 <div className="absolute left-4 top-4 rounded-full bg-background/80 px-3 py-1 text-[11px] font-medium text-text-soft">
                   Demo photo
                 </div>
-                <img
+                <Image
                   src={product.imageUrl}
                   alt={product.name}
+                  fill
                   className="h-full w-full object-cover"
+                  sizes="(min-width: 768px) 480px, 100vw"
+                  priority
                 />
               </div>
             </div>
