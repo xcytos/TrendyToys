@@ -1,8 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useProductsStore } from "../../../lib/store/products";
 import { mockProducts } from "../../../lib/mock/products";
+import { Button } from "../../../components/ui/button";
 
 export default function AdminDashboardPage() {
   const products = useProductsStore((state) => state.products);
@@ -24,9 +26,33 @@ export default function AdminDashboardPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-10">
-      <h1 className="mb-6 text-3xl font-semibold">
-        Admin Dashboard
-      </h1>
+      <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <h1 className="text-3xl font-semibold">
+            Admin Dashboard
+          </h1>
+          <p className="mt-2 text-sm text-text-muted">
+            Quick overview of your demo catalog and shortcuts to key admin pages.
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <Link href="/admin/products">
+            <Button type="button" size="sm">
+              Manage products
+            </Button>
+          </Link>
+          <Link href="/admin/products/new">
+            <Button type="button" size="sm" variant="outline">
+              Add product
+            </Button>
+          </Link>
+          <Link href="/admin/theme">
+            <Button type="button" size="sm" variant="ghost">
+              Theme controls
+            </Button>
+          </Link>
+        </div>
+      </div>
       <div className="grid gap-4 md:grid-cols-[minmax(0,2fr)_minmax(0,1.2fr)]">
         <div className="grid gap-4 md:grid-cols-3">
           <div
