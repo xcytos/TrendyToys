@@ -5,7 +5,6 @@ import { useState } from "react";
 import { useProductsStore } from "../../../../../lib/store/products";
 import type {
   ToyAvailability,
-  ToyProduct,
   ToyStatus
 } from "../../../../../lib/mock/products";
 import { Input } from "../../../../../components/ui/input";
@@ -18,9 +17,12 @@ type EditPageProps = {
 };
 
 export default function AdminEditProductPage(props: EditPageProps) {
+  const router = useRouter();
   const product = useProductsStore((state) =>
     state.products.find((item) => item.id === props.params.id)
   );
+  const updateProduct = useProductsStore((state) => state.updateProduct);
+  const [saving, setSaving] = useState(false);
 
   if (!product) {
     return (
@@ -36,33 +38,22 @@ export default function AdminEditProductPage(props: EditPageProps) {
     );
   }
 
-  return <AdminEditProductForm product={product} />;
-}
-
-type AdminEditProductFormProps = {
-  product: ToyProduct;
-};
-
-function AdminEditProductForm(props: AdminEditProductFormProps) {
-  const router = useRouter();
-  const updateProduct = useProductsStore((state) => state.updateProduct);
-  const [saving, setSaving] = useState(false);
   const [draft, setDraft] = useState({
-    name: props.product.name,
-    price: String(props.product.price),
-    category: props.product.category,
-    ageRange: props.product.ageRange,
-    description: props.product.description,
-    imageUrl: props.product.imageUrl,
-    status: props.product.status as ToyStatus,
-    availability: props.product.availability as ToyAvailability,
-    featured: props.product.featured
+    name: product.name,
+    price: String(product.price),
+    category: product.category,
+    ageRange: product.ageRange,
+    description: product.description,
+    imageUrl: product.imageUrl,
+    status: product.status as ToyStatus,
+    availability: product.availability as ToyAvailability,
+    featured: product.featured
   });
 
   const handleSave = () => {
     setSaving(true);
     const parsedPrice = Number(draft.price || 0);
-    updateProduct(props.product.id, {
+    updateProduct(product.id, {
       name: draft.name,
       price: parsedPrice,
       category: draft.category,
@@ -233,3 +224,4 @@ function AdminEditProductForm(props: AdminEditProductFormProps) {
     </div>
   );
 }
+

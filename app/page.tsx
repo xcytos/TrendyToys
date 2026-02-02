@@ -13,7 +13,6 @@ import { mockTestimonials } from "../lib/mock/testimonials";
 import { useThemeStore } from "../lib/store/theme";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 
 export default function HomePage() {
   const trending = mockProducts.filter(
@@ -91,14 +90,11 @@ export default function HomePage() {
                 <div className="absolute left-4 top-4 rounded-full bg-background/80 px-3 py-1 text-[11px] font-medium text-text-soft">
                   Happy customers • Demo photos
                 </div>
-                <div className="relative aspect-[4/3] bg-surface-muted">
-                  <Image
+                <div className="aspect-[4/3] bg-surface-muted">
+                  <img
                     src="/hero-kids-1.png"
                     alt="Kids playing with Trendy Toys"
-                    fill
                     className="h-full w-full object-cover"
-                    sizes="(min-width: 768px) 400px, 100vw"
-                    priority
                   />
                 </div>
               </div>
@@ -152,13 +148,11 @@ export default function HomePage() {
           </h2>
           <div className="grid gap-4 md:grid-cols-3">
             <div className="overflow-hidden rounded-2xl bg-surface-muted shadow-sm">
-              <div className="relative aspect-[4/3] bg-surface">
-                <Image
+              <div className="aspect-[4/3] bg-surface">
+                <img
                   src="/hero-kids-2.png"
                   alt="Child stacking colorful toys"
-                  fill
                   className="h-full w-full object-cover"
-                  sizes="(min-width: 768px) 320px, 100vw"
                 />
               </div>
               <div className="px-4 py-3 text-sm text-text-muted">
@@ -166,13 +160,11 @@ export default function HomePage() {
               </div>
             </div>
             <div className="overflow-hidden rounded-2xl bg-surface-muted shadow-sm">
-              <div className="relative aspect-[4/3] bg-surface">
-                <Image
+              <div className="aspect-[4/3] bg-surface">
+                <img
                   src="/hero-kids-3.png"
                   alt="Parents and child playing together"
-                  fill
                   className="h-full w-full object-cover"
-                  sizes="(min-width: 768px) 320px, 100vw"
                 />
               </div>
               <div className="px-4 py-3 text-sm text-text-muted">
@@ -180,13 +172,11 @@ export default function HomePage() {
               </div>
             </div>
             <div className="overflow-hidden rounded-2xl bg-surface-muted shadow-sm">
-              <div className="relative aspect-[4/3] bg-surface">
-                <Image
+              <div className="aspect-[4/3] bg-surface">
+                <img
                   src="/hero-kids-4.png"
                   alt="Flatlay of Trendy Toys products"
-                  fill
                   className="h-full w-full object-cover"
-                  sizes="(min-width: 768px) 320px, 100vw"
                 />
               </div>
               <div className="px-4 py-3 text-sm text-text-muted">
